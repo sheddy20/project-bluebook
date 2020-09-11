@@ -44,21 +44,23 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            'you tap the button $_counter times',
-            style: TextStyle(
-              fontSize: 17.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.5,
-              color: Colors.teal,
+          Center(
+            child: Text(
+              'you tap the button $_counter times',
+              style: TextStyle(
+                fontSize: 17.0,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.5,
+                color: Colors.teal,
+              ),
             ),
           ),
           CircleAvatar(
             radius: 40.5,
-            backgroundImage: AssetImage(''),
           ),
         ],
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         child: Icon(Icons.add),
