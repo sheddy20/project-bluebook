@@ -22,11 +22,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _counter = 0;
+  int _count = 0;
 
   void _incrementCounter() {
     setState(() {
-      _counter = _counter + 2;
+      _count = _count + 50;
     });
   }
 
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Center(
             child: Text(
-              'you tap the button $_counter times',
+              'you tap the button $_count times',
               style: TextStyle(
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold,
