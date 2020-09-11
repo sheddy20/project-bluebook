@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
       title: 'BlueBook',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.purple,
+        primaryColor: Colors.deepPurpleAccent,
       ),
       home: HomePage(),
     );
@@ -35,28 +35,34 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('BlueBook'),
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {},
-        ),
-        elevation: 1.5,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.queue_music),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Center(
             child: Text(
-              'you tap the button $_count times',
+              'you tap the button too many times.',
               style: TextStyle(
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1.5,
-                color: Colors.teal,
+                color: Colors.blueGrey,
               ),
             ),
           ),
-          CircleAvatar(
-            radius: 40.5,
+          Text(
+            '$_count',
+            style: TextStyle(
+              color: Colors.blueGrey,
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ],
       ),
@@ -64,10 +70,31 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         child: Icon(Icons.add),
-        backgroundColor: Colors.purpleAccent,
+        backgroundColor: Colors.deepPurpleAccent,
         tooltip: 'Tap',
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50.5),
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.all(0),
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountEmail: Text('Ejeh Shedrack Abel'),
+              accountName: Text('Shedrack Nicholas'),
+              decoration: BoxDecoration(
+                color: Colors.deepPurpleAccent,
+              ),
+            ),
+            ListTile(
+              title: Text('Account'),
+              leading: Icon(Icons.account_box),
+              onTap: () {},
+              trailing: Icon(Icons.more_vert),
+              subtitle: Text('Delete Account'),
+            ),
+          ],
         ),
       ),
     );
