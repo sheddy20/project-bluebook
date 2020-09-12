@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _checkStringName() {
-    (name == 'Maxwell') ? print('Correct Name') : print('Wrong Name');
+    (name == 'maxwell') ? print('Correct Name') : print('Wrong Name');
   }
 
   var _colors = Colors.deepPurpleAccent;
@@ -68,17 +68,19 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: RaisedButton(
-              onPressed: _checkWithCondition,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50.0),
+          Center(
+            child: Container(
+              margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: RaisedButton(
+                onPressed: _checkWithCondition,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                child: Text('For tenary Expression'),
+                textColor: Colors.white,
+                color: Colors.black,
+                padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
               ),
-              child: Text('For tenary Expression'),
-              textColor: Colors.white,
-              color: Colors.black,
-              padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
             ),
           ),
           SizedBox(height: 20.0),
@@ -89,7 +91,7 @@ class _HomePageState extends State<HomePage> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50.0),
               ),
-              child: Text('For tenary Expression'),
+              child: Text('For boolean Expression'),
               textColor: Colors.white,
               color: Colors.black,
               padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
@@ -103,7 +105,7 @@ class _HomePageState extends State<HomePage> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50.0),
               ),
-              child: Text('For tenary Expression'),
+              child: Text('For string Expression'),
               textColor: Colors.white,
               color: Colors.black,
               padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
