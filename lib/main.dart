@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -8,108 +10,38 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'BlueBook',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.deepPurpleAccent,
-      ),
       home: HomePage(),
     );
   }
 }
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int a = 20;
-
-  int b = 30;
-
-  bool c = true;
-
-  String name = 'maxwell';
-
-  void _checkWithCondition() {
-    (a > b) ? print('A is bigger') : print('B is also big');
-  }
-
-  void _checkBolean() {
-    c ? print('C is true') : print('C is false');
-  }
-
-  void _checkStringName() {
-    (name == 'maxwell') ? print('Correct Name') : print('Wrong Name');
-  }
-
-  var _colors = Colors.deepPurpleAccent;
-
-  var _icons = Icons.menu;
-
-  var _icon = Icons.more_vert;
-
+class HomePage extends StatelessWidget {
+  final _icon = Icons.menu;
+  final _icon2 = Icons.more_vert;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Tenary Expression'),
-        backgroundColor: _colors,
+        title: Text('BlueBook'),
+        backgroundColor: Colors.deepPurpleAccent,
         leading: IconButton(
-          icon: Icon(_icons),
+          icon: (Icon(
+            _icon,
+          )),
           onPressed: () {},
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(_icon),
+            icon: Icon(_icon2),
             onPressed: () {},
           ),
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: ListView(
         children: <Widget>[
-          Center(
-            child: Container(
-              margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
-              child: RaisedButton(
-                onPressed: _checkWithCondition,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50.0),
-                ),
-                child: Text('For tenary Expression'),
-                textColor: Colors.white,
-                color: Colors.black,
-                padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
-              ),
-            ),
-          ),
-          SizedBox(height: 20.0),
-          Container(
-            margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: RaisedButton(
-              onPressed: _checkBolean,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50.0),
-              ),
-              child: Text('For boolean Expression'),
-              textColor: Colors.white,
-              color: Colors.black,
-              padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
-            ),
-          ),
-          SizedBox(height: 20.0),
-          Container(
-            margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: RaisedButton(
-              onPressed: _checkStringName,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50.0),
-              ),
-              child: Text('For string Expression'),
-              textColor: Colors.white,
-              color: Colors.black,
-              padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
-            ),
+          Image.asset(
+            'Assets/Images/shedrack.jpg',
+            width: 200.0,
           ),
         ],
       ),
