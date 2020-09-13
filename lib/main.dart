@@ -43,6 +43,41 @@ class HomePage extends StatelessWidget {
             'Assets/Images/shedrack.jpg',
             width: 200.0,
           ),
+          SizedBox(height: 50.0),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                FlatButton(
+                  child: Text('List Item 1'),
+                  onPressed: () {},
+                  textColor: Colors.white,
+                  color: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                SizedBox(height: 10.0),
+                FlatButton(
+                  child: Text('List Item 2'),
+                  onPressed: () {},
+                  textColor: Colors.white,
+                  color: Colors.black,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                ),
+                SizedBox(height: 10.0),
+                FlatButton(
+                  child: Text('List Item 3'),
+                  onPressed: () {},
+                  textColor: Colors.white,
+                  color: Colors.black,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
