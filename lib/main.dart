@@ -39,9 +39,13 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          Image.asset(
-            'Assets/Images/shedrack.jpg',
+          Container(
             width: 200.0,
+            height: 200.0,
+            child: Text('I am Abel Shedrack'),
+            decoration: BoxDecoration(
+              color: Colors.black,
+            ),
           ),
           SizedBox(height: 50.0),
           Center(
